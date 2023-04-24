@@ -30,7 +30,7 @@ with tab1:
 
 
 
-    st.markdown("<h2 style='text-align: center; color: grey;'>This application allow you to see Meteorite Landings through the years.</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: grey;'>This application allows you to see Meteorite Landings through the years.</h2>", unsafe_allow_html=True)
 
     st.subheader("About the Dataset")
     st.markdown('The dataset used in this analysis was obtained through The Meteoritical Society which contains information on all of the known meteorites.')
