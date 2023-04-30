@@ -25,7 +25,7 @@ tab1, tab2 = st.tabs(['Introduction', 'Meteorite Landings through the years'])
 year_meteor = st.sidebar.slider("Pick a year",min_value=700, max_value=2023, value=100, step=10)
 
 with tab1:
-    image = Image.open('image1.webp')
+    image = Image.open('finalapp.png')
 
 
 
