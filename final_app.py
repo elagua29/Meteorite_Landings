@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import altair as alt
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 
 @st.cache_data
@@ -13,20 +13,15 @@ def load_data(url):
     df = load_data("https://raw.githubusercontent.com/elagua29/Meteorite_Landings/main/Meteorite_Landings.csv")
     st.dataframe(df)
 
+st.subheader("Meteorite Data")
 
-
-
-tab1, tab2, tab3, tab4 = st.tabs(['Introduction/Source', 'Scatter Plot', 'Box Plot', 'tbd'])
+tab1, tab2, tab3, tab4 = st.tabs(['Introduction', 'Scatter Plot', 'Source', 'idk'])
 
 
 
 with tab1:
     Meteorite_Data = pd.read_csv('Meteorite_Data.csv')
-    st.write (Meteorite_Data)
-
-
-
-
+    
     st.markdown("<h2 style='text-align: center; color: grey;'>This application allows you to see Meteorite Landings through the years.</h2>", unsafe_allow_html=True)
 
     st.subheader("About the Dataset")
@@ -50,17 +45,25 @@ with tab2:
     corr = round(Meteorite_Data[x_val].corr(Meteorite_Data[y_val]),2)
     st.write(f"The correlation between {x_val} and {y_val} is {corr}")
 
+
 with tab3:
-    import pandas as pd
-    from matplotlib import pyplot as plt
-
-    df=Meteorite_Data
-    plt.scatter(x=df['Longitude'], y=df['Latitude'])
-    plt.show()
-
-
-  
-
+    Meteorite_Data = pd.read_csv('Meteorite_Data.csv')
+    st.write (Meteorite_Data)
 
 with tab4:
-    st.write('hi')
+    # Initialize the lists for X and Y
+    Meteorite_Data = pd.read_csv('Meteorite_Data.csv')
+  
+    df = pd.DataFrame(Meteorite_Data)
+  
+    X = list(df.iloc[:, 0])
+    Y = list(df.iloc[:, 1])
+  
+    # Plot the data using bar() method
+    plt.bar(X, Y, color='g')
+    plt.title("Fall Throught the Years")
+    plt.xlabel("Year")
+    plt.ylabel("Mass(g)")
+  
+    # Show the plot
+    plt.show()
