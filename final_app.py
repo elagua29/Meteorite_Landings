@@ -15,7 +15,7 @@ def load_data(url):
 
 st.subheader("Meteorite Data")
 
-tab1, tab2, tab3, tab4 = st.tabs(['Introduction', 'Scatter Plot', 'Source', 'idk'])
+tab1, tab2, tab3, tab4 = st.tabs(['Introduction', 'Scatter Plot', 'Source', 'Bar Chart'])
 
 
 
