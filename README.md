@@ -5,4 +5,4 @@ This dataset consists of 34, 513 meteorites and includes the following field: na
 
 The link to the webpage is: (https://catalog.data.gov/dataset/meteorite-landings)
 
-Deployed Streamlit Application: https://grac3smith-elephant-poaching.streamlit.app/
+Deployed Streamlit Application: https://elagua29-meteorite-landings-final-app-hof8pf.streamlit.app/
