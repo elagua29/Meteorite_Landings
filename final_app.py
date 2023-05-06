@@ -15,7 +15,7 @@ def load_data(url):
 
 st.subheader("Meteorite Data")
 
-tab1, tab2, tab3, tab4 = st.tabs(['Introduction', 'Scatter Plot', 'Source', 'Bar Chart'])
+tab1, tab2, tab3 = st.tabs(['Introduction', 'Scatter Plot', 'Source'])
 
 
 
@@ -50,20 +50,4 @@ with tab3:
     Meteorite_Data = pd.read_csv('Meteorite_Data.csv')
     st.write (Meteorite_Data)
 
-with tab4:
-    # Initialize the lists for X and Y
-    Meteorite_Data = pd.read_csv('Meteorite_Data.csv')
-  
-    df = pd.DataFrame(Meteorite_Data)
-  
-    X = list(df.iloc[:, 0])
-    Y = list(df.iloc[:, 1])
-  
-    # Plot the data using bar() method
-    plt.bar(X, Y, color='g')
-    plt.title("Fall Throught the Years")
-    plt.xlabel("Year")
-    plt.ylabel("Mass(g)")
-  
-    # Show the plot
-    plt.show()
+
