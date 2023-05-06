@@ -13,7 +13,7 @@ def load_data(url):
     df = load_data("https://raw.githubusercontent.com/elagua29/Meteorite_Landings/main/Meteorite_Landings.csv")
     st.dataframe(df)
 
-st.subheader("Meteorite Data")
+st.subheader("Meteor Analysis")
 
 tab1, tab2, tab3 = st.tabs(['Introduction', 'Scatter Plot', 'Source'])
 
